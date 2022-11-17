@@ -50,6 +50,9 @@
   font-weight: 400;
   font-size: 15px;
 }
+.btn-english:hover {
+  cursor: pointer;
+}
 
 .btn-signIn {
   width: 90px;
@@ -62,6 +65,9 @@
   font-size: 15px;
   margin-left: 30px;
 }
+.btn-signIn:hover {
+  cursor: pointer;
+}
 
 .main-contents {
   width: 100%;
@@ -73,14 +79,14 @@
 }
 
 .unlimited_Tv {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 600;
   line-height: 4.5rem;
 }
 .watch_anywhere {
   font-size: 1.7rem;
   font-weight: 400;
-  line-height: 4rem;
+  line-height: 3.5rem;
 }
 .ready_to_watch {
   font-size: 1.2rem;
@@ -108,4 +114,84 @@
   font-weight: 400;
   font-size: 1.6rem;
   cursor: pointer;
+}
+
+.break-div {
+  height: 8px;
+  width: 100%;
+  background-color: #222222;
+}
+
+.freq-asked {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.freq-asked > h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 11rem;
+  margin-top: 5px;
+}
+
+.question {
+  background-color: #303030;
+  width: 50%;
+  margin-bottom: 10px;
+  padding: 0 30px;
+  text-align: left;
+  font-size: 1.6rem;
+}
+
+.ques {
+  height: 75px;
+  display: flex;
+  align-items: center;
+}
+
+.first-footer {
+  color: #737373;
+  height: 50vh;
+  padding: 30px 22% 0 22%;
+}
+.footer-cards {
+  font-weight: 400;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-card > p {
+  line-height: 2rem;
+}
+.footer-card > p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.footer-head {
+  line-height: 4rem;
+}
+
+.ready-to {
+  margin-top: 25px;
+  line-height: 4rem;
+  font-size: 1.1rem;
+}
+
+.footer-form {
+  margin-bottom: 5rem;
+}
+
+.footer-btn {
+  margin-top: 3rem;
+  width: 120px;
+  height: 50px;
+  border-color: #737373;
+  color: #737373;
+  outline: none;
+}
+.netflix-india {
+  line-height: 5rem;
+  font-size: 0.9rem;
 }
