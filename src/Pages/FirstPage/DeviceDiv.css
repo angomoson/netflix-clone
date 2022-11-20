@@ -33,3 +33,32 @@
   font-size: 1.5rem;
   font-weight: 400;
 }
+
+@media only screen and (max-width: 850px) {
+  .device-desc > h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+  .device-desc > p {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .device-div {
+    flex-direction: column;
+  }
+  .device-pic > img {
+    width: 70%;
+    object-fit: contain;
+  }
+  .device-desc > h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .device-desc > p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}

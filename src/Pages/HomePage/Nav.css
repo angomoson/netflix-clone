@@ -34,3 +34,17 @@
   object-fit: contain;
   cursor: pointer;
 }
+
+.home-nav-right {
+  position: fixed;
+  right: 90px;
+  display: flex;
+  color: white;
+  gap: 20px;
+}
+.log-out-btn {
+  cursor: pointer;
+}
+.log-out-btn:hover {
+  color: gray;
+}

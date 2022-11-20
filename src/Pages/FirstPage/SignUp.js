@@ -1,27 +1,45 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import DeviceDiv from "./DeviceDiv";
 import DeviceDivLeft from "./DeviceDivLeft";
-import "./SignIn.css";
+import "./SignUp.css";
 import tvImage from "../../Assets/tv.png";
 import mobileImage from "../../Assets/mobile.jpg";
 import devicePile from "../../Assets/device-pile.png";
 import cartoon from "../../Assets/cartoon.png";
+import { useNavigate } from "react-router-dom";
+import imageNav from "../../Assets/netflix-nav.png";
 
-const SignIn = () => {
+const SignUp = ({ TempEmail, SetTempEmail }) => {
+  const [email, setEmail] = useState("");
+  const navigate = useNavigate();
+
+  const handleSignUpSubmit = (e) => {
+    try {
+      e.preventDefault();
+      navigate("/createAccount");
+      SetTempEmail(email);
+      console.log(TempEmail);
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+
+  const handleSignIn = () => {
+    navigate("/signIn");
+  };
+
   return (
     <div>
       <div className="first_banner_contents">
         <header className="first_banner">
           <nav className="first_nav">
             <div className="nav_contents">
-              <img
-                className="nav_logo"
-                src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
-                alt=""
-              />
+              <img className="nav_logo-sup" src={imageNav} alt="" />
               <div className="nav_buttons">
                 <button className="btn-english">English</button>
-                <button className="btn-signIn">Sign In</button>
+                <button onClick={handleSignIn} className="btn-signIn">
+                  Sign In
+                </button>
               </div>
             </div>
           </nav>
@@ -36,11 +54,17 @@ const SignIn = () => {
             <div className="email_contents">
               <form className="email_contents_form" action="">
                 <input
+                  onChange={(e) => setEmail(e.target.value)}
                   className="first_email_input"
                   type="text"
                   placeholder="Email address"
                 />
-                <button className="get_started_btn">Get Started</button>
+                <button
+                  onClick={handleSignUpSubmit}
+                  className="get_started_btn"
+                >
+                  Get Started
+                </button>
               </form>
             </div>
           </div>
@@ -166,11 +190,16 @@ const SignIn = () => {
             <p>Contact Us</p>
           </div>
         </div>
-        <button className="btn-english footer-btn">English</button>
+        <button
+          onChange={(e) => setEmail(e.target.value)}
+          className="btn-english footer-btn"
+        >
+          English
+        </button>
         <p className="netflix-india">Netflix India</p>
       </div>
     </div>
   );
 };
 
-export default SignIn;
+export default SignUp;
